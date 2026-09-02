@@ -1,0 +1,65 @@
+services:
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+    volumes:
+      - redis-data:/data
+
+  api:
+    build:
+      context: .
+      target: api
+    restart: unless-stopped
+    environment:
+      REDIS_URL: redis://redis:6379/0
+      OUTPUT_DIR: /data/generated
+      CORS_ORIGINS: http://localhost:3000
+    ports:
+      - "8000:8000"
+    volumes:
+      - generated-audio:/data/generated
+    depends_on:
+      - redis
+
+  worker:
+    profiles: ["gpu"]
+    build:
+      context: .
+      target: worker
+    restart: unless-stopped
+    environment:
+      REDIS_URL: redis://redis:6379/0
+      QUEUE_NAME: music-generation
+      OUTPUT_DIR: /data/generated
+      MODEL_PATH: /models
+      MULA_DEVICE: cuda
+      CODEC_DEVICE: cuda
+      LAZY_LOAD: "true"
+    volumes:
+      - ./models:/models:ro
+      - generated-audio:/data/generated
+    depends_on:
+      - redis
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+  web:
+    build:
+      context: ./apps/web
+      args:
+        NEXT_PUBLIC_API_URL: http://localhost:8000
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+
+volumes:
+  redis-data:
+  generated-audio:
