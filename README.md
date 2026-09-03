@@ -25,7 +25,9 @@ commercial provider or model vendor.
   A subsequent VAE test selected the Official VAE over ScragVAE for sound quality. Harsh or
   right-biased high-frequency drum artifacts remain a known, accepted limitation rather than a
   rejection criterion. The Official VAE configuration then completed five consecutive two-minute
-  renders without failure in 5 minutes 51.40 seconds total; musical acceptance is pending listening.
+  renders without failure in 5 minutes 51.40 seconds total. Listening found only one or two
+  candidate-usable renders: repetition and ensemble timing remain too inconsistent for product
+  integration. The next controlled test targets the planner using the known failing seeds.
 
 The first controlled ACE-Step structure experiment is documented in
 [`docs/evaluations/ace-step-structure-001.md`](docs/evaluations/ace-step-structure-001.md).

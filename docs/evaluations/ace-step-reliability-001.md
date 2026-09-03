@@ -78,17 +78,31 @@ outputs/ace-step/reliability-benchmark-001/05-seed-20260908.wav
 
 The WAV files are local evaluation artifacts and remain excluded from Git.
 
-## Listening scorecard
+## Listening result — 2026-09-03
 
-| Track | Usable sound | Low repetition | Complete structure | Natural outro | Overall preference |
-| --- | ---: | ---: | ---: | ---: | ---: |
-| 01 |  |  |  |  |  |
-| 02 |  |  |  |  |  |
-| 03 |  |  |  |  |  |
-| 04 |  |  |  |  |  |
-| 05 |  |  |  |  |  |
+| Track | Result |
+| --- | --- |
+| 01 | Good overall sound and fewer drum errors, but strongly repetitive; may be a lucky render |
+| 02 | More musical variation, but audible drum-sound errors remain |
+| 03 | Poor ensemble coherence: the players drift in and out of time, like a band rehearsing before a show |
+| 04 | Neither good nor bad; a mediocre result |
+| 05 | Similar ensemble-coherence failure to 03, but worse |
 
-Listening result: pending.
+Interpretation:
+
+- Technical reliability is 5/5, but musical reliability is at most 2/5. The run therefore fails
+  the predeclared three-of-five acceptance gate.
+- Track 01 shows that good sound is possible, but its repetition and the other four outcomes mean
+  it cannot yet be treated as a repeatable baseline.
+- Track 02 suggests that variation and clean rendering are partly independent variables.
+- Tracks 03 and 05 expose a separate failure mode from drum timbre: timing and ensemble coherence.
+  This points toward the planner/audio-code path rather than the VAE alone.
+- Track 04 shows the middle of the distribution is merely acceptable, not compelling.
+
+Outcome: do not begin broad UI integration yet. Re-test the known failing seeds with the larger 4B
+planner while holding XL Turbo and Official VAE fixed. If the larger planner does not improve
+ensemble coherence or repetition, move to reference-audio/Cover control rather than generating
+more random text-to-music samples.
 
 ## Decision rule
 
