@@ -116,10 +116,33 @@ ranking; A/B/C describe prompt complexity only.
 Known listening note for B: the result is promising and has a real outro, but its middle structure
 feels relatively loop-based.
 
+## Listening result — 2026-09-03
+
+| Question | Result |
+| --- | --- |
+| Overall preference | B |
+| Least unwanted repetition | A |
+| Does C develop structure better than B? | Yes |
+| Sound-quality difference | No meaningful difference; none of the three currently sounds good |
+
+Interpretation:
+
+- Temporal prompting works: C has clearer structural development than B.
+- More explicit structure is not automatically more enjoyable: B remains the preferred balance.
+- A can feel less repetitive because it is free to wander, even though it has less deliberate form.
+- Prompt complexity did not improve audio fidelity. All three variants share the same current
+  sound-quality ceiling.
+
+This benchmark therefore answers the structure question but does not pass the overall acceptance
+gate. The next experiment should hold B as the musical reference and investigate the executor and
+decoder path for fidelity improvements. A larger planner may change composition knowledge, but it
+should not be assumed to improve rendering quality; DiT variants and VAE choices are more direct
+fidelity variables.
+
 ## Decision rule
 
-Prefer C only if it improves structural development or unwanted repetition without materially
-reducing sound quality, style adherence, or outro quality relative to B. If C wins, repeat B and C
-across at least three new seeds to check that the improvement is reliable rather than accidental.
-If neither structured prompt improves on A, investigate the 4B planner, model variants, or a
-reference-audio/Cover workflow before product integration.
+No variant passes the overall acceptance gate because audio fidelity remains inadequate. Keep B as
+the current preference reference and C as evidence that temporal prompting can improve deliberate
+development. Investigate DiT variants, VAE choices, and then reference-audio/Cover workflows before
+product integration. Test the 4B planner separately as a composition variable rather than treating
+it as an audio-fidelity upgrade.

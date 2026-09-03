@@ -19,8 +19,10 @@ commercial provider or model vendor.
 - The Mac M4 Pro with 64 GB unified memory handled the workload without memory pressure, but the
   instrumental output did not meet the required musical-quality threshold.
 - ACE-Step 1.5 XL Turbo completed a 120-second instrumental locally in about 68 seconds with
-  promising musical quality and a natural outro. Its tendency toward loop-based structure is now
-  being evaluated with controlled temporal prompting.
+  promising composition behavior and a natural outro. Its tendency toward loop-based structure is
+  being evaluated with controlled temporal prompting. The first A/B/C test confirmed that temporal
+  prompts can improve deliberate structure, but prompting alone did not improve audio fidelity;
+  none of the tested variants has passed the final sound-quality threshold.
 
 The first controlled ACE-Step structure experiment is documented in
 [`docs/evaluations/ace-step-structure-001.md`](docs/evaluations/ace-step-structure-001.md).
