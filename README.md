@@ -27,7 +27,8 @@ commercial provider or model vendor.
   rejection criterion. The Official VAE configuration then completed five consecutive two-minute
   renders without failure in 5 minutes 51.40 seconds total. Listening found only one or two
   candidate-usable renders: repetition and ensemble timing remain too inconsistent for product
-  integration. The next controlled test targets the planner using the known failing seeds.
+  integration. A controlled 1.7B-versus-4B planner test on the two known failing seeds has now been
+  rendered; listening evaluation is pending.
 
 The first controlled ACE-Step structure experiment is documented in
 [`docs/evaluations/ace-step-structure-001.md`](docs/evaluations/ace-step-structure-001.md).
@@ -35,6 +36,8 @@ The current official-VAE versus ScragVAE fidelity experiment is documented in
 [`docs/evaluations/ace-step-fidelity-001.md`](docs/evaluations/ace-step-fidelity-001.md).
 The five-track local reliability experiment is documented in
 [`docs/evaluations/ace-step-reliability-001.md`](docs/evaluations/ace-step-reliability-001.md).
+The controlled 1.7B-versus-4B planner experiment is documented in
+[`docs/evaluations/ace-step-planner-001.md`](docs/evaluations/ace-step-planner-001.md).
 
 No engine is considered the permanent foundation of this project until it passes listening and
 performance acceptance tests on the target machine.
