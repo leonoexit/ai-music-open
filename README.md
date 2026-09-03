@@ -21,8 +21,10 @@ commercial provider or model vendor.
 - ACE-Step 1.5 XL Turbo completed a 120-second instrumental locally in about 68 seconds with
   promising composition behavior and a natural outro. Its tendency toward loop-based structure is
   being evaluated with controlled temporal prompting. The first A/B/C test confirmed that temporal
-  prompts can improve deliberate structure, but prompting alone did not improve audio fidelity;
-  none of the tested variants has passed the final sound-quality threshold.
+  prompts can improve deliberate structure, but prompting alone did not improve audio fidelity.
+  A subsequent VAE test selected the Official VAE over ScragVAE for sound quality. Harsh or
+  right-biased high-frequency drum artifacts remain a known, accepted limitation rather than a
+  rejection criterion; the Official VAE configuration advances to workflow testing.
 
 The first controlled ACE-Step structure experiment is documented in
 [`docs/evaluations/ace-step-structure-001.md`](docs/evaluations/ace-step-structure-001.md).

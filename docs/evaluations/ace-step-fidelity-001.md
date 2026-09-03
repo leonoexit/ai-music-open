@@ -102,4 +102,25 @@ Use headphones if practical. Ignore small loudness differences and focus on arti
 - If ScragVAE is worse, restore the official VAE and treat the decoder as a ruled-out first-order
   fix for this configuration.
 
-Listening result: pending.
+## Listening result — 2026-09-03
+
+| Question | Result |
+| --- | --- |
+| Better overall sound | Official VAE |
+| Less obvious repetition | ScragVAE |
+| Decoder selected for continued work | Official VAE |
+
+Interpretation:
+
+- ScragVAE changes the result but does not improve the target dimension. Its lower repetition is
+  interesting, but it does not compensate for the loss in overall sound quality.
+- Because this was an end-to-end render rather than an identical-latent replay, the repetition
+  difference must not be attributed to decoder fidelity alone.
+- Restore the official VAE as the project default. ScragVAE is ruled out as the first-order sound
+  quality fix for this configuration.
+- Harsh hi-hats and a tendency for the high-frequency drum image to drift right are accepted as a
+  current-generation model limitation. The same class of artifact is also heard in commercial
+  systems; it should be tracked, but it is not an ACE-Step rejection criterion for this project.
+
+Outcome: the Official VAE configuration advances to the next stage. Further work should prioritize
+repeatability and user control over chasing this known drum artifact.
