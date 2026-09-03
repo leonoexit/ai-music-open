@@ -24,12 +24,15 @@ commercial provider or model vendor.
   prompts can improve deliberate structure, but prompting alone did not improve audio fidelity.
   A subsequent VAE test selected the Official VAE over ScragVAE for sound quality. Harsh or
   right-biased high-frequency drum artifacts remain a known, accepted limitation rather than a
-  rejection criterion; the Official VAE configuration advances to workflow testing.
+  rejection criterion. The Official VAE configuration then completed five consecutive two-minute
+  renders without failure in 5 minutes 51.40 seconds total; musical acceptance is pending listening.
 
 The first controlled ACE-Step structure experiment is documented in
 [`docs/evaluations/ace-step-structure-001.md`](docs/evaluations/ace-step-structure-001.md).
 The current official-VAE versus ScragVAE fidelity experiment is documented in
 [`docs/evaluations/ace-step-fidelity-001.md`](docs/evaluations/ace-step-fidelity-001.md).
+The five-track local reliability experiment is documented in
+[`docs/evaluations/ace-step-reliability-001.md`](docs/evaluations/ace-step-reliability-001.md).
 
 No engine is considered the permanent foundation of this project until it passes listening and
 performance acceptance tests on the target machine.
