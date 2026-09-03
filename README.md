@@ -26,6 +26,8 @@ commercial provider or model vendor.
 
 The first controlled ACE-Step structure experiment is documented in
 [`docs/evaluations/ace-step-structure-001.md`](docs/evaluations/ace-step-structure-001.md).
+The current official-VAE versus ScragVAE fidelity experiment is documented in
+[`docs/evaluations/ace-step-fidelity-001.md`](docs/evaluations/ace-step-fidelity-001.md).
 
 No engine is considered the permanent foundation of this project until it passes listening and
 performance acceptance tests on the target machine.
