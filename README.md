@@ -27,8 +27,9 @@ commercial provider or model vendor.
   rejection criterion. The Official VAE configuration then completed five consecutive two-minute
   renders without failure in 5 minutes 51.40 seconds total. Listening found only one or two
   candidate-usable renders: repetition and ensemble timing remain too inconsistent for product
-  integration. A controlled 1.7B-versus-4B planner test on the two known failing seeds has now been
-  rendered; listening evaluation is pending.
+  integration. A controlled 1.7B-versus-4B planner test improved only one of two known failing
+  seeds, so 4B does not justify its approximately 50% time overhead as the default. The project
+  retains 1.7B and advances to reference-audio/Cover control testing.
 
 The first controlled ACE-Step structure experiment is documented in
 [`docs/evaluations/ace-step-structure-001.md`](docs/evaluations/ace-step-structure-001.md).

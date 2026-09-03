@@ -74,7 +74,25 @@ For each seed, compare 1.7B with 4B:
 2. Does 4B reduce obvious repetition?
 3. Does 4B improve the overall musical result enough to justify approximately 50% more time?
 
-Listening result: pending.
+## Listening result — 2026-09-03
+
+| 4B render | Result |
+| --- | --- |
+| Seed `20260906` | Temporarily acceptable; the known failure improved to a usable middle ground |
+| Seed `20260908` | Still poor |
+
+Interpretation:
+
+- The 4B planner can change or improve an individual failure, but it did not repair both known bad
+  seeds.
+- A one-of-two improvement is not reliable enough to justify making generation approximately 50%
+  slower by default.
+- The larger planner is retained as an optional experiment, not the production default.
+- Keep the 1.7B planner for speed and move the next controlled experiment to reference-audio/Cover
+  control, where musical timing and structure are constrained by source material rather than left
+  entirely to text-to-music sampling.
+
+Outcome: 4B fails the predeclared adoption rule.
 
 ## Decision rule
 
