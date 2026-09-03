@@ -18,8 +18,12 @@ commercial provider or model vendor.
 - A community MLX port was validated on Apple Silicon for 120- and 180-second generation.
 - The Mac M4 Pro with 64 GB unified memory handled the workload without memory pressure, but the
   instrumental output did not meet the required musical-quality threshold.
-- ACE-Step 1.5 is the next engine candidate because it officially supports Apple Silicon,
-  instrumental structure, natural-language captions, and explicit outros.
+- ACE-Step 1.5 XL Turbo completed a 120-second instrumental locally in about 68 seconds with
+  promising musical quality and a natural outro. Its tendency toward loop-based structure is now
+  being evaluated with controlled temporal prompting.
+
+The first controlled ACE-Step structure experiment is documented in
+[`docs/evaluations/ace-step-structure-001.md`](docs/evaluations/ace-step-structure-001.md).
 
 No engine is considered the permanent foundation of this project until it passes listening and
 performance acceptance tests on the target machine.
